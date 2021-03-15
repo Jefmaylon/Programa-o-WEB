@@ -1,0 +1,1 @@
+Em suma, dois jogadores escolhem dois símbolo com que querem jogar. Normalmente é usado as letras X e O.  O material do jogo é um tabuleiro, que pode ser desenhado, com três linhas e três colunas. Os espaços em branco dessas linhas e colunas serão preenchidos com os símbolos escolhidos.

@@ -1,0 +1,1 @@
+alert("Eu tenho a força");

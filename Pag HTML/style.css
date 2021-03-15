@@ -1,0 +1,9 @@
+img {
+    float: right;
+    height: 400px;
+    width: 600px;
+}
+p {
+    text-align: right;
+    float: left;
+}

@@ -1,0 +1,15 @@
+</script type="text/javascript">
+
+Function alterarImagem() {
+	document.getElementById('imagem1').src = "imagem2.jpg";
+}
+
+</script>
+
+img
+img
+img
+img
+
+button onclick="alterarImagem(); "> Teste </button>
+
