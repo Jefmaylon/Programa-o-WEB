@@ -18,6 +18,28 @@ $(function(){
             }
         })
         
+        $('form').on('submit', function(e){
+            e.preventDefault();
+            const dados = {};
+            
+            $('form').find('input').each(function(i, el){
+                dados[el.id] = el.value;
+            })
+            
+            $.ajax('https://jsonplaceholder.typicode.com/users', {
+                type: 'POST',
+                data: dados,
+                success: function(_dados){
+                    console.log(_dados)
+                    mostrarDados([_dados])
+                    alert('Sucesso !!!')
+                },
+                error: function(){
+                    alert('Erro!!!')
+                }
+            })  
+        })
+
         function mostrarDados(dados){
             $.each(dados, function(i, el){
                 tbody.append(`<tr class="linha">
@@ -25,8 +47,7 @@ $(function(){
                                 <td class="nome">${el.name}</td>
                                 <td class="username">${el.username}</td>
                                 <td class="email">${el.email}</td>
-                                <td class="endereco">Rua: ${el.address.street}, Apartamento: ${el.address.suite}, Código Postal: ${el.address.zipcode}, Latitude: ${el.address.geo.lat} | Longitude: ${el.address.geo.lng}
-                                    <tr>
+                                <tr>
                                 </td>
                               </tr>                              
              `)
@@ -39,6 +60,8 @@ $(function(){
         $("#name").val($linha.children(".nome").text());
         $("#username").val($linha.children(".username").text());
         $("#email").val($linha.children(".email").text());
-        $("#endereco").val($linha.children(".endereco").text());
+
     })
+
+   
 })
