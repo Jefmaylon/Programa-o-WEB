@@ -17,8 +17,7 @@
     "pg-hstore": "^2.3.3",
     "pg-promise": "^10.10.1",
     "sequelize": "^6.6.2",
-    "sequelize-cli": "^6.2.0",
-    "swagger-jsdoc": "^7.0.0-rc.6",
-    "swagger-ui-express": "^4.1.6"
+    "sequelize-cli": "^6.2.0"
+   
   }
 }
