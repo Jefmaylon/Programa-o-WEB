@@ -5,9 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import HelloMessage from './HelloMessage';
 import Teste from './paginas/Teste';
+import Routes from './routes';
 
 ReactDOM.render(
-   <routes/>,
+   <Routes/>,
   document.getElementById('root')
 );
 

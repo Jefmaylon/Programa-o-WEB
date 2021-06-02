@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './style.css';
 import api from '../services/api';
 
 // instalar axios: npm install axios
@@ -23,8 +22,8 @@ function Livro() {
                         <li>
                             <p>Id: {livro.id}</p>
                             <p>Nome: {livro.nome}</p>
-                            <p>editora: {livro.editora}</p>
-                            <p>isbn: {livro.isbn}</p>
+                            <p>editora: {livro.codigoeditora}</p>
+                            <p>isbn: {livro.issbn}</p>
                         </li>
                     ))
                 }

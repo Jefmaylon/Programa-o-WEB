@@ -2,15 +2,16 @@ import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import HelloMessage from './HelloMessage';
 import Teste from './paginas/Teste';
-import routes from './routes';
+import books from './paginas/Teste/Livro/index'
 
 function routes () {
     return (
         <BrowserRouter>
-        <switch>
+        <Switch>
             <Route path="/" exact={true} component={HelloMessage}/>
             <Route path="/Teste" component={Teste}/>
-        </switch>
+            <Route path="/books" component={books}/>
+        </Switch>
         </BrowserRouter>
     )
 }
