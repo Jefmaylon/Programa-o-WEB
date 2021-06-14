@@ -15,10 +15,11 @@ router.get('/book/:id', async function (req, res) {
 });
 
 router.delete('/book/:id', async function (req, res) {
+    const book = await booksService.deleteBook(req.params.id);
     return res.json([{message: 'registro excluído com sucesso'}]);
 });
 
-router.put('/book', async function(req, res) {
+router.post('/book', async function(req, res) {
     const book = req.body;
     const newBook = await booksService.saveBook(book);
     res.json(newBook);

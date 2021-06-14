@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import api from '../services/api';
 
-// instalar axios: npm install axios
-// criar componente para listar livros
 
 function Livro() {
     const [livros, setLivros] = useState([]);
@@ -25,6 +23,7 @@ function Livro() {
                             <p>editora: {livro.codigoeditora}</p>
                             <p>isbn: {livro.issbn}</p>
                         </li>
+                        
                     ))
                 }
             </ul>
@@ -33,3 +32,4 @@ function Livro() {
 }
 
 export default Livro;
+
