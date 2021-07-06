@@ -1,0 +1,37 @@
+import React, { useState, useEffect } from 'react';
+import api from '../services/api';
+
+
+function Carro() {
+    const [carros, setCarros] = useState([]);
+
+    useEffect(() => {
+        api.get('carros',{}).then(response => {
+            setCarros(response.data);
+        });
+    }, []);
+
+    return (
+        <div>
+            <h1>Carros</h1>
+            <ul>
+                {
+                    carros.map(carros => (
+                        <li>
+                            <p>Id: {carros.id}</p>
+                            <p>Marca: {carros.marca}</p>
+                            <p>Modelo: {carros.modelo}</p>
+                            <p>Ano: {carros.ano}</p>
+                            <p>Quantidade de lugares: {carros.qtdlugares}</p>
+                            <p>Cor: {carros.cor}</p>
+                        </li>
+                        
+                    ))
+                }
+            </ul>
+        </div>
+    );
+}
+
+export default Carro;
+
